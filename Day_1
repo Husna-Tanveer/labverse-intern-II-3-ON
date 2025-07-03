@@ -1,0 +1,47 @@
+//number
+function readNumber() {
+  let num;
+
+  do {
+    num = prompt("Enter a number please?", 0);
+  } while ( !isFinite(num) );
+
+  if (num === null || num === '') return null;
+
+  return +num;
+}
+
+alert(`Read: ${readNumber()}`);
+
+
+
+//string
+function ucFirst(str) {
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+alert( ucFirst("john") ); // John
+
+
+
+//array
+1-let fruits = ["Apple", "Orange", "Plum"];
+
+alert( fruits );
+
+
+2-let fruit = ["Apple", "Orange", "Pear"];
+
+alert( fruit.pop() ); // remove "Pear" and alert it
+
+alert( fruit );
+
+3-let fruitss = ["Apple"];
+
+fruitss.push("Orange", "Peach");
+fruitss.unshift("Pineapple", "Lemon");
+
+// ["Pineapple", "Lemon", "Apple", "Orange", "Peach"]
+alert( fruitss );
